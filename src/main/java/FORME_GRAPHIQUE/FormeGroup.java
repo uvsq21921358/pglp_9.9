@@ -1,11 +1,11 @@
-package uvsq21921358;
+package FORME_GRAPHIQUE;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class FormeGroup implements Forme{
-	
+	 
 	public List<Forme> formeList;
 	
 	public FormeGroup() {
@@ -16,7 +16,7 @@ public class FormeGroup implements Forme{
 		formeList.add(f);
 	}
 	
-	public void removeForme(Forme f) {
+	public void removeForme(Forme f) { 
 		formeList.remove(f);
 	}
 	
@@ -24,9 +24,6 @@ public class FormeGroup implements Forme{
 		return formeList;
 	}
 	
-	public Iterator<Forme> iterator() {
-		return formeList.listIterator();
-	}
 
 	public void move(double x, double y) {
 		for (Forme form : formeList) {
@@ -35,10 +32,24 @@ public class FormeGroup implements Forme{
 		
 	}
 	
+	public void print(){
+	    for (Forme form : formeList){
+	    	form.print();
+	    }
+	  }
+	
 	public void AffichonsGroup() {
 		for (int i=0; i<formeList.size();i++) {
 			System.out.println(formeList.get(i));
 		}
 	}
+
+	@Override
+	public String getNom() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 
 }

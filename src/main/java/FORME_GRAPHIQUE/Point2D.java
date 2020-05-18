@@ -1,27 +1,51 @@
-package uvsq21921358;
+package FORME_GRAPHIQUE;
 
 /**
  * @author SIMPORE
  * Cette classe permet d'initialiser un point. Elle sera utiliser dans la classe Cercle pour l'initialisation du centre.
  *
  */
-public class Point2D implements Forme{
+public class Point2D {
 	
-	double x,y;
+	private String nom;
+	private double x;
+	private double y;
 	
-	public Point2D (double x,double y) {
-		this.x=x;
-		this.y=y;
+	public Point2D (String nom,double x,double y) {
+		this.nom=nom;
+	    this.x = x;
+	    this.y = y;
 	}
 
+	/**
+	 * Methode de return du tostring
+	 */
 	@Override
 	public String toString() {
-		return "Point [ x=" + x + ", y=" + y + "]";
+		return "Point [nom=" + nom + ", x=" + x + ", y=" + y + "]";
 	}
 
 	public void move(double a, double b) {
-		x=x+a;
-		y=y+b;
+		setX(getX()+a);
+		setY(getY()+b);
 	}
+
+	public double getX() {
+		return x;
+	}
+
+	public void setX(double x) {
+		this.x = x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public void setY(double y) {
+		this.y = y;
+	}
+
+	
 
 }

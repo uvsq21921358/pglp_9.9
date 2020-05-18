@@ -1,7 +1,7 @@
 /**
  * 
  */
-package uvsq21921358;
+package FORME_GRAPHIQUE;
 
 /**
  * @author SIMPORE
@@ -11,26 +11,27 @@ package uvsq21921358;
  * affiche qui permet d'afficher les informations ou la mise à jour
  *
  */
-public class Cercle implements Forme{
+public class Cercle implements Forme{ 
 
 	private String nomC;
 	private Point2D centre;
-	private double rayon;
+	private double rayon; 
 	
 	public Cercle(String nomC, double x, double y, double rayon) {
 		this.nomC=nomC;
-		this.centre = new Point2D(x,y);
+		this.centre = new Point2D("Centre",x,y);
 		this.rayon = rayon;
 	}
 	
 
 	public void move(double x, double y) {
-		centre.move(x, y);	
+		this.centre.setX(this.centre.getX()+x);
+	    this.centre.setY(this.centre.getY()+y);
 	}
 	
 	@Override
 	public String toString() {
-		return "Cercle(centre= (" +centre.x + "," +centre.y + "), rayon=" + rayon + ")";
+		return "Cercle(centre= (" +centre.getX() + "," +centre.getY() + "), rayon=" + rayon + ")";
 	}
 
 
@@ -63,10 +64,28 @@ public class Cercle implements Forme{
 		this.rayon = rayon;
 	}
 
-
-	public void affiche() {
+	/**
+	 * Cette classe permettait d'afficher l
+	 */
+	/*public void affiche() {
 		Affichage affichage=new Affichage();
 		affichage.afficher(this.toString());
+	}*/
+
+
+	@Override
+	public void print() {
+		Affichage affichage=new Affichage();
+		affichage.afficher(this.toString());
+		
 	}
+
+
+	@Override
+	public String getNom() {
+		return getNomC();
+	}
+
+
 
 }
