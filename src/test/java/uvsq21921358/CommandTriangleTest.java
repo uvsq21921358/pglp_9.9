@@ -4,33 +4,30 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import CMD.CommandCercle;
 import CMD.CommandPrint;
+import CMD.CommandRectangle;
+import CMD.CommandTriangle;
 import CMD.Interpreteur;
-import FORME_GRAPHIQUE.Cercle;
 import FORME_GRAPHIQUE.FormeGroup;
 
-public class CommandCercleTest {
+public class CommandTriangleTest {
 
 	@Test
 	public void executeTest() {
 		
-		FormeGroup form=new FormeGroup();
 		Interpreteur inter=new Interpreteur();
-		inter.setParametersT(new String[] {"Mon_cercle@", "0","0","3"});
-		CommandCercle com=new CommandCercle(inter);
-		com.execute();
-		//form.AffichonsGroup(); 
+		inter.setParametersT(new String[] {"Mon_Triangle@","0","0","8","4","4","10"});
+		CommandTriangle com=new CommandTriangle(inter);
+		com.execute(); 
 		CommandPrint comAff=new CommandPrint(inter); 
 		comAff.execute();
-	} 
-
+	}
+	
 	@Test
 	public void erreurSaisi_Parametre_Test() {
-		FormeGroup form1=new FormeGroup();
 		Interpreteur inter=new Interpreteur();
-		inter.setParametersT(new String[] {"Mon_cercle@","0","3"});
-		CommandCercle com=new CommandCercle(inter);
+		inter.setParametersT(new String[] {"Mon_Triangle@","0","3","4","5"});
+		CommandTriangle com=new CommandTriangle(inter);
 		com.execute(); 
 		CommandPrint comAff=new CommandPrint(inter); 
 		comAff.execute();
@@ -38,12 +35,13 @@ public class CommandCercleTest {
 	
 	@Test
 	public void erreur2Test() {
-		FormeGroup form1=new FormeGroup();
+		FormeGroup form3=new FormeGroup();
 		Interpreteur inter=new Interpreteur();
-		inter.setParametersT(new String[] {"Mon_cercle@","0","3","fff"});
-		CommandCercle com=new CommandCercle(inter);
+		inter.setParametersT(new String[] {"Mon_Triangle@","0","3","fff","10","0","20"});
+		CommandTriangle com=new CommandTriangle(inter);
 		com.execute(); 
 		CommandPrint comAff=new CommandPrint(inter); 
 		comAff.execute();
 	}
+
 }

@@ -2,6 +2,9 @@ package uvsq21921358;
 
 import org.junit.Test;
 
+import FORME_GRAPHIQUE.Affichage;
+import FORME_GRAPHIQUE.Cercle;
+
 public class CercleTest {
 
 	@Test()
@@ -11,11 +14,11 @@ public class CercleTest {
 		A.afficher(C.toString());
 		C.move(2, 5);
 		A.afficher(C.toString());
-	}
+	} 
 	
 	@Test()
 	public void vu() {
 		Cercle Cvu =new Cercle (null, 1,1,5);
-		Cvu.affiche();
-	}
+		Cvu.print();
+	} 
 }
