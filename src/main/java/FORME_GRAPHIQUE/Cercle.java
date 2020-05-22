@@ -5,10 +5,10 @@ package FORME_GRAPHIQUE;
 
 /**
  * @author SIMPORE
- * Cette classe initiale un cercle avec un nom, un centre de point et un rayon. 
- * Elle est contituée des méthodes:
- * move qui permet de faire deplacer le centre c'est a dire mettre à jour les coordonnées et de
- * affiche qui permet d'afficher les informations ou la mise à jour
+ * Cette classe initiale un cercle avec un nom, un centre de de type point et un rayon. 
+ * Elle est contituee  des  methodes:
+ * move qui permet de faire deplacer le centre c'est a dire mettre a jour les coordonnï¿½es et de
+ * affiche qui permet d'afficher les informations ou la mise a jour
  *
  */
 public class Cercle implements Forme{ 
@@ -24,11 +24,17 @@ public class Cercle implements Forme{
 	}
 	
 
+	/**
+	 * Methode de deplacement du cercle
+	 */
 	public void move(double x, double y) {
 		this.centre.setX(this.centre.getX()+x);
 	    this.centre.setY(this.centre.getY()+y);
 	}
 	
+	/**
+	 * Syntaxe Ã  afficher lors de la saisie d'un cercle
+	 */
 	@Override
 	public String toString() {
 		return "Cercle(centre= (" +centre.getX() + "," +centre.getY() + "), rayon=" + rayon + ")";
@@ -72,7 +78,9 @@ public class Cercle implements Forme{
 		affichage.afficher(this.toString());
 	}*/
 
-
+	/**
+	 * Methode d'affichage du cercle
+	 */
 	@Override
 	public void print() {
 		Affichage affichage=new Affichage();
@@ -80,7 +88,9 @@ public class Cercle implements Forme{
 		
 	}
 
-
+	/*
+	 * Methode qui permet de retourner le nom de la forme. Ici c'est le cercle 
+	 */
 	@Override
 	public String getNom() {
 		return getNomC();

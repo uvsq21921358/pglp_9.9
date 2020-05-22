@@ -2,7 +2,7 @@ package FORME_GRAPHIQUE;
 
 /**
  * @author SIMPORE
- * Cette classe permet d'initialiser un point. Elle sera utiliser dans la classe Cercle pour l'initialisation du centre.
+ * Cette classe permet d'initialiser un point. Elle sera utiliser dans la classe Cercle pour l'initialisation du centre, egalement dans la classe carre.
  *
  */
 public class Point2D {
@@ -24,12 +24,21 @@ public class Point2D {
 	public String toString() {
 		return "Point [nom=" + nom + ", x=" + x + ", y=" + y + "]";
 	}
-
+	
+	/**
+	 * Methode move pour le deplacement d'un point
+	 * @param a
+	 * @param b
+	 */
 	public void move(double a, double b) {
 		setX(getX()+a);
 		setY(getY()+b);
 	}
 
+	/**
+	 * les geteurs et les seteurs 
+	 * @return
+	 */
 	public double getX() {
 		return x;
 	}

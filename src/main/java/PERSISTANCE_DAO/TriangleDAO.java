@@ -1,5 +1,8 @@
 package PERSISTANCE_DAO;
 
+/**
+ * La classe TriangleDao. Elle implemente l'interface DAO et permet la creation de la base de données de la forme triangle.
+ */
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,8 +16,14 @@ import FORME_GRAPHIQUE.Triangle;
 
 public class TriangleDAO implements DAO<Triangle> {
 
+	/**
+	 * Etablissement de la connexion
+	 */
 	private static String base = Connexion.base;
 
+	/**
+	 * Methode de cretaion d'un objet de type Triangle. Il s'agit juste de l'insertion d'un trinagle dans la base de données
+	 */
 	@Override
 	public Triangle create(Triangle obj) {
 		try (Connection connect = DriverManager.getConnection(base)){
@@ -36,6 +45,9 @@ public class TriangleDAO implements DAO<Triangle> {
 		return obj;
 	}
 
+	/**
+	 * Methode de recherche d'un objet de type triangle
+	 */
 	@Override
 	public Triangle read(String id) {
 		Triangle tri = null;
@@ -55,6 +67,9 @@ public class TriangleDAO implements DAO<Triangle> {
 		return tri;
 	}
 
+	/**
+	 * Methode de mise à jour d'un objet de type triangle
+	 */
 	@Override
 	public Triangle update(Triangle obj) {
 		try (Connection connect = DriverManager.getConnection(base)) {
@@ -76,6 +91,9 @@ public class TriangleDAO implements DAO<Triangle> {
 		return obj;
 	}
 
+	/**
+	 * Methode de suppression d'un objet de type triangle
+	 */
 	@Override
 	public void delete(Triangle obj) {
 		try (Connection connect = DriverManager.getConnection(base)){
@@ -92,6 +110,9 @@ public class TriangleDAO implements DAO<Triangle> {
 		
 	}
 
+	/**
+	 * Methode de recherche d'un ensemble de type triangle
+	 */
 	@Override
 	public List<Triangle> findAll() {
 		List<Triangle> liste = new ArrayList<>();

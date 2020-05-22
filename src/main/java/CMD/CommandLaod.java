@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 import FORME_GRAPHIQUE.Affichage;
 import PERSISTANCE_DAO.DAOFactory;
-
+/**
+ * 
+ * @author utilisateur
+ *Cette commande permet 
+ */
 public class CommandLaod implements Command{
 
 	 public Interpreteur interpreteur;
@@ -15,7 +19,7 @@ public class CommandLaod implements Command{
 	  @Override
 	  public void execute() {
 	    Affichage Aff = new Affichage();
-	    Aff.afficher("Voulez vous charger Charger ?");
+	    Aff.afficher("Voulez vous charger ?");
 	    String reponseUtilisateur;
 	   
 	    do {

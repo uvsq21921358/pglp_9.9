@@ -9,6 +9,9 @@ import FORME_GRAPHIQUE.Rectangle;
 import PERSISTANCE_DAO.CercleDAO;
 import PERSISTANCE_DAO.RectangleDAO;
 
+/**
+ *  Classe CommandCarre qui permet de creer un rectangle.
+ */
 public class CommandRectangle implements Command{
 
 
@@ -18,11 +21,14 @@ public class CommandRectangle implements Command{
 	    this.inter=interpreteur;
 	  }
 
+	  /**
+	   * Methode de creation. Elle verifie d'abord que le nombre de parametre saisi est correct avant la creation. Ici le nombre de paramÃ¨tre est de 5: le nom du rectangle, les coordonnÃ©es du point (x et y) ,la longeur et la largeur. 
+	   */
 	  @Override
 	  public void execute() {
 	    if (inter.parametersT.length != 5) {
 	      Affichage a = new Affichage();
-	      a.afficher("Erreur sur le nombre de paramètres.");
+	      a.afficher("Erreur sur le nombre de paramï¿½tres.");
 	    }
 	    else{
 	      try {
@@ -32,14 +38,14 @@ public class CommandRectangle implements Command{
 	        double b = Double.parseDouble(inter.parametersT[2]);
 	        double c = Double.parseDouble(inter.parametersT[3]);
 	        double d = Double.parseDouble(inter.parametersT[4]);
-	        if(d<=c) {
+	        if(c<=d) {
 	        	Affichage aff = new Affichage();
-	  	      aff.afficher("Erreur!!!! la largeur d'un rectangle doit être inféreure à la longueur .");
+	  	      aff.afficher("Erreur!!!! la largeur d'un rectangle doit ï¿½tre infereure ï¿½ la longueur .");
 	  	     }
 	        else inter.Mon_dessin.add(new Rectangle(inter.parametersT[0],a,b,c,d));
 	        
 	      }catch(NumberFormatException e){
-	    	  System.out.println("Le type entré pour un des paramètres est incorrect");
+	    	  System.out.println("Le type saisi pour un des paramï¿½tres est incorrect!!!!");
 	        //e.printStackTrace();
 	      }
 	    }

@@ -1,5 +1,9 @@
 package CMD;
-
+/**
+ * 
+ * @author SIMPORE
+ *Commande qui permet de revenir en arriere
+ */
 public class CommandUndo implements Command{
 
 	public Interpreteur interpreteur;

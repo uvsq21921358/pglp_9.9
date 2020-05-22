@@ -1,4 +1,9 @@
 package FORME_GRAPHIQUE;
+/**
+ * 
+ * @author SIMPORE
+ *La classe triangle est initialise avec un nom, et 3 points. Pour cette forme, le deplacement se fait sur les 3 points.
+ */
 
 public class Triangle implements Forme{
 
@@ -45,11 +50,17 @@ public class Triangle implements Forme{
 		P3 = p3;
 	}
 
+	/**
+	 * Syntaxe à afficher lors de la saisie d'un triangle
+	 */
 	@Override
 	public String toString() {
 		return "Triangle ( P1= (" + P1.getX() + ";" + P1.getY() +"), P2=(" + P2.getX() + ";" + P2.getY() +"), P3=(" + P3.getX() + ";" + P3.getY() +"))";
 	}
 
+	/**
+	 * Methode de deplacement du triangle
+	 */
 	@Override
 	public void move(double x, double y) {
 		P1.move(x, y);
@@ -62,12 +73,18 @@ public class Triangle implements Forme{
 		affichage.afficher(this.toString());
 	}*/
 
+	/**
+	 * Methode d'affichage du triangle
+	 */
 	@Override
 	public void print() {
 		Affichage affichage=new Affichage();
 		affichage.afficher(this.toString());
 	}
 
+	/*
+	 * Methode qui permet de retourner le nom de la forme. Ici c'est le triangle 
+	 */
 	@Override
 	public String getNom() {
 

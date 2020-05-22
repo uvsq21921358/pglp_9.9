@@ -1,5 +1,7 @@
 package CMD;
-
+/**
+ * Commande qui permet de quitter le programme
+ */
 import java.util.Scanner;
 
 import FORME_GRAPHIQUE.Affichage;
@@ -12,6 +14,9 @@ public class CommandQuit implements Command {
 	    this.interpreteur=interpreteur;
 	  }
 
+	  /**
+	   * Cette methode permet de quitter le programme, mais avant de le quitter un message de demande de sauvegarde est envoyé à l'utilisateur.
+	   */
 	  @Override
 	  public void execute() {
 	    Affichage A = new Affichage();

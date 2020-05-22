@@ -10,6 +10,9 @@ import FORME_GRAPHIQUE.Triangle;
 import PERSISTANCE_DAO.CarreDAO;
 import PERSISTANCE_DAO.TriangleDAO;
 
+/**
+ *  Classe CommandCarre qui permet de creer un triangle.
+ */
 public class CommandTriangle implements Command{
 
 	  public Interpreteur inter;
@@ -18,11 +21,14 @@ public class CommandTriangle implements Command{
 	    this.inter=interpreteur;
 	  }
 
+	  /**
+	   * Methode de creation. Elle verifie d'abord que le nombre de parametre saisi est correct avant la creation. Ici le nombre de paramÃ¨tre est de 7: le nom du triangle, les coordonnÃ©es du point p1 (a et b) ,p2 (c et d) et p3 (e et f). 
+	   */
 	  @Override
 	  public void execute() {
 	    if (inter.parametersT.length != 7) {
 	      Affichage a = new Affichage();
-	      a.afficher("Erreur sur le nombre de paramètres.");
+	      a.afficher("Erreur sur le nombre de paramï¿½tres.");
 	    }
 	    else{
 	      try {
@@ -36,7 +42,7 @@ public class CommandTriangle implements Command{
 	        double f = Double.parseDouble(inter.parametersT[6]);
 	        inter.Mon_dessin.add(new Triangle(inter.parametersT[0],a,b,c,d,e,f));
 	      }catch(NumberFormatException e){
-	    	  System.out.println("Le type entré pour un des paramètres est incorrect");
+	    	  System.out.println("Le type saisi pour un des paramï¿½tres est incorrect!!!!");
 	        //e.printStackTrace();
 	      }
 	    }

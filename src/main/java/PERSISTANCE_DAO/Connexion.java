@@ -8,6 +8,9 @@ import java.util.Properties;
 
 public class Connexion {
 
+	/**
+	 * Variable de connexion
+	 */
 	private static final String Nom = "Nayima";
 	private static final String password = "pwd";
 	public static String base = "jdbc:derby:base;create=true";

@@ -21,10 +21,10 @@ public class CarreTest {
 		A.afficher(Car.toString());
 	}
 	 
-	@Test()
+	/*@Test()
 	public void vu() { 
 		Carre Cvu =new Carre (null, 1,1,5);
 		Cvu.print();
-	}
+	}*/
  
 }

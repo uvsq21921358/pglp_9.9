@@ -2,8 +2,8 @@ package FORME_GRAPHIQUE;
 
 /**
  * 
- * @author Nayima
- * La classe Carré initialisée avec son nom, l'origine de type point2D et le coté.
+ * @author SIMPORE
+ * La classe Carre est initialise avec un nom, l'origine de type point2D et le cote.
  *
  */
 public class Carre implements Forme{  
@@ -19,7 +19,7 @@ public class Carre implements Forme{
 	}
 
 	/**
-	 * Methode d'affichage du type carre
+	 * Syntaxe Ã  afficher lors de la saisie d'un carre
 	 */
 	@Override
 	public String toString() {
@@ -78,6 +78,9 @@ public class Carre implements Forme{
 		
 	}
 
+	/*
+	 * Methode qui permet de retourner le nom de la forme. Ici c'est le carre 
+	 */
 	@Override
 	public String getNom() {
 

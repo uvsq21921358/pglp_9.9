@@ -15,7 +15,7 @@ public class JDBCTest {
 	public void createConnexion(){
 		Connexion DB=new Connexion();
 		DB.connexion();  
-	} 
+	}  
 	  
 	/**
 	 * Test de la creation et de la suppression de la table Cercle dans la Connexion
@@ -72,7 +72,7 @@ public class JDBCTest {
 	 * Test de la creation et de la suppression de la table Triangle dans la Connexion
 	 */
 	//Creation de la table Rectangle
-	@Test()
+	/*@Test()
 	public void createTableTriangleTest(){
 		Connexion DB=new Connexion();
 		DB.createTableTriangle();

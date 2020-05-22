@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * 
+ * @author SIMPORE
+ *La classe FormeGroup pour le traitement de toutes les formes en groupe
+ */
+
 public class FormeGroup implements Forme{
 	 
 	public List<Forme> formeList;

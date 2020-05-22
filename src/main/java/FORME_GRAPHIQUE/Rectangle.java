@@ -1,5 +1,10 @@
 package FORME_GRAPHIQUE;
 
+/**
+ * 
+ * @author SIMPORE
+ * La classe Rectangle est initialise avec un nom, l'origine de type point2D qui permettra de le faire deplacer, la longueur et la largeur.
+ */
 public class Rectangle implements Forme {
 
 	private String nomR;
@@ -15,6 +20,9 @@ public class Rectangle implements Forme {
 	}
 
 	
+	/**
+	 * Syntaxe à afficher lors de la saisie d'un Rectangle
+	 */
 	@Override
 	public String toString() {
 		return "Rectangle (origine=" + origineR.getX() + ";" + origineR.getY() + "),Longueur=" + Longueur + ", Largeur=" + Largeur + ")";
@@ -60,7 +68,9 @@ public class Rectangle implements Forme {
 		Largeur = largeur;
 	}
 
-
+	/**
+	 * Methode de deplacement du Rectangle
+	 */
 	@Override
 	public void move(double x, double y) {
 		origineR.move(x,y);		
@@ -71,14 +81,19 @@ public class Rectangle implements Forme {
 		affichage.afficher(this.toString());
 	}*/
 
-
+	
+	/**
+	 * Methode d'affichage du Rectangle
+	 */
 	@Override
 	public void print() {
 		Affichage affichage=new Affichage();
 		affichage.afficher(this.toString());
 	}
 
-
+	/*
+	 * Methode qui permet de retourner le nom de la forme. Ici c'est le Rectangle 
+	 */
 	@Override
 	public String getNom() {
 		return getNomR();

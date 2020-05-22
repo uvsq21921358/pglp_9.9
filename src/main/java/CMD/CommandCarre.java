@@ -1,13 +1,12 @@
 package CMD;
-
+/**
+ * Classe CommandCarre qui permet de creer un carrÃ©. 
+ */
 import java.util.ArrayList;
 
 import FORME_GRAPHIQUE.Affichage;
 import FORME_GRAPHIQUE.Carre;
-import FORME_GRAPHIQUE.Cercle;
-import FORME_GRAPHIQUE.Forme;
-import PERSISTANCE_DAO.CarreDAO;
-import PERSISTANCE_DAO.CercleDAO;
+
 
 public class CommandCarre implements Command{
 
@@ -18,11 +17,14 @@ public class CommandCarre implements Command{
 	    this.inter=interpreteur;
 	  }
 
+	  /**
+	   * Methode de creation. Elle verifie d'abord que le nombre de parametre saisi est correct avant la creation. Ici le nombre de paramÃ¨tre est de 4: le nom du carre, les coordonnÃ©es du point (x et y) et le cotÃ©. 
+	   */
 	  @Override
 	  public void execute() {
 	    if (inter.parametersT.length != 4) {
 	      Affichage a = new Affichage();
-	      a.afficher("Erreur sur le nombre de paramètres.");
+	      a.afficher("Erreur sur le nombre de paramï¿½tres.");
 	    }
 	    else{
 	      try {
@@ -32,8 +34,10 @@ public class CommandCarre implements Command{
 	        double b = Double.parseDouble(inter.parametersT[2]);
 	        double c = Double.parseDouble(inter.parametersT[3]);
 	        inter.Mon_dessin.add(new Carre(inter.parametersT[0],a,b,c));
+	        //CommandSave commandS=new CommandSave(inter);
+	       // commandS.execute();
 	      }catch(NumberFormatException e){
-	    	  System.out.println("Le type entré pour un des paramètres est incorrect");
+	    	  System.out.println("Le type saisi pour un des paramï¿½tres est incorrect!!!!");
 	        //e.printStackTrace();
 	      }
 	    }

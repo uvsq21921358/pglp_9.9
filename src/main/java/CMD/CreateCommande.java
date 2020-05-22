@@ -2,7 +2,11 @@ package CMD;
 
 import FORME_GRAPHIQUE.*;
 import PERSISTANCE_DAO.*;
-
+/**
+ * 
+ * @author utilisateur
+ *Classe qui permet d'identifier la commande saisie par l'utilisateur.
+ */
 
 public class CreateCommande implements Command{
 	
@@ -17,7 +21,7 @@ public class CreateCommande implements Command{
         Connexion conn = new Connexion();
         conn.connexion();
     
-        Forme f = null;
+       // Forme f = null; 
         if (forme.getClass() == Cercle.class) {
             DAO<Cercle> D = new CercleDAO();
     	    D.create((Cercle) forme);
@@ -27,12 +31,14 @@ public class CreateCommande implements Command{
         	  DAO<Carre> D = new CarreDAO();
             D.create((Carre) forme);
             
-    }else if (forme.getClass() == Rectangle.class) {
-    	DAO<Rectangle> D = new RectangleDAO();
+        }else 
+        	if (forme.getClass() == Rectangle.class) {
+        	DAO<Rectangle> D = new RectangleDAO();
             
-        D.create((Rectangle) forme);
+        	D.create((Rectangle) forme);
         
-    }else if(forme.getClass() == Triangle.class)
+        	}else 
+        		if(forme.getClass() == Triangle.class)
         	
         	 {
             	DAO<Triangle> D = new TriangleDAO();

@@ -1,55 +1,105 @@
 ## pglp_9.9 `LOGICIEL DE DESSIN`
-Ce projet a pour but de permettre à l'étudiant de savoir implémenter les principes de conception ainsi que les fonctionnalités du langage java.
+Ce projet a pour but de permettre ï¿½ l'ï¿½tudiant de savoir implï¿½menter les principes de conception ainsi que les fonctionnalitï¿½s du langage java. Il s'agit lÃ  de mettre en place un logiciel de dessin.
 
 Le logiciel devra permettre de :
 
-* Chaque forme sera identifiée par un nom ("c1", "unCercle", ...).
+* Chaque forme sera identifiï¿½e par un nom ("c1", "unCercle", ...).  
 
-* L'application permettra de manipuler des cercles, des rectangles, des carrés et des triangles.
 
-* Chaque forme devra pouvoir être affichée et déplacée.
+* L'application permettra de manipuler des cercles, des rectangles, des carrï¿½s et des triangles.  
 
-* Les formes devront pouvoir être regroupées et pourront subir des traitements globaux comme par exemple déplacer ensemble un cercle et un triangle.
 
-* Un dessin (ensemble de formes) pourra être sauvegardé/chargé dans un SGBD embarqué 
+* Chaque forme devra pouvoir ï¿½tre affichï¿½e et dï¿½placï¿½e.  
+
+
+* Les formes devront pouvoir ï¿½tre regroupï¿½es et pourront subir des traitements globaux comme par exemple dï¿½placer ensemble un cercle et un triangle.  
+
+
+* Un dessin (ensemble de formes) pourra ï¿½tre sauvegardï¿½/chargï¿½ dans un SGBD embarquï¿½ .  
+
+
+
 
 <hr>
 
-#### 1. Proposons et implémentons une hiérarchie de classe représentant les formes graphiques
-Pour cette partie, Nous avons crée une interface Forme qui sera implémentée par toutes les formes à mettre en place: le carré, le cercle, le rectangle et le triangle
+#### 1. Proposons et implï¿½mentons une hiï¿½rarchie de classe reprï¿½sentant les formes graphiques  
+Pour cette partie, Nous avons crï¿½e une interface Forme qui sera implï¿½mentÃ©e Ã  son tour par toutes les formes ï¿½ mettre en place: le carrï¿½, le cercle, le rectangle et le triangle. Les formes ont Ã©tÃ© implÃ©mentÃ©e suivant ces structures ci-dessous:  
+
+* Le cercle : initialisÃ© par un nom, les cordonnÃ©es de son centre de type point(x,y) et un rayon;  
+    
+    public Cercle(String nomC, double x, double y, double rayon) {
+		this.nomC=nomC;
+		this.centre = new Point2D("Centre",x,y);
+		this.rayon = rayon;
+	}
+  
+
+* Le carrÃ© : initialisÃ© par un nom, une origine de type point(x,y) afin de pouvoir facilitÃ© son dÃ©placement et un cotÃ©; 
+    
+    
+    public Carre(String nomCarre,double x, double y, double cote) {
+		this.nomCarre = nomCarre;
+		this.origine =new Point2D("origine",x,y);
+		this.cote = cote;
+	} 
+  
+
+* Le rectangle : initialisÃ© par un nom, une origine de type point Ã©galement, une longeur et une largeur;
+    
+    public Rectangle(String nomR, double x, double y ,double longueur, double largeur) {
+		this.nomR = nomR;
+		this.origineR = new Point2D("origine Rectangle",x,y);
+		Longueur = longueur;
+		Largeur = largeur;
+	}  
+ 
+
+* Le triangle : initialisÃ© par trois (3) points. 
+    
+    public Triangle(String NomT, double a, double b, double c, double d, double e, double f) {
+		this.P1 = new Point2D("origineP1",a,b);
+		this.P2 = new Point2D("origineP2",c,d);
+		this.P3 = new Point2D("origineP3",e,f);
+	} 
+  
+
 
 <hr>
 
-#### 2. Représentons la notion de groupe de formes en appliquant le pattern `Composite`
-La classe FormeGroup qui implémentera l'interface Forme permettra de pouvoir effectuer un ensemble de manipulation (deplacer , afficher toutes les formes du groupes suivant un paramètre donné) sur un groupe de forme (Carre, cercle, rectangle, triangle) donné. 
+#### 2. Reprï¿½sentons la notion de groupe de formes en appliquant le pattern `Composite`
+La classe FormeGroup qui implï¿½mentera l'interface Forme permettra de pouvoir effectuer un ensemble de manipulation (deplacer , afficher toutes les formes du groupes suivant un paramï¿½tre donnï¿½) sur un groupe de forme (Carre, cercle, rectangle, triangle) donnï¿½.   
+
 
 <hr>
 
 #### 3. Render les formes et les groupes persistants en utilisant le pattern `DAO` et `JDBC`
-Cette partie a pour but de mettre en place la base de données du logiciel. Sur cette base de données pourra etre effectuer les opérations comme l'ajout d'une nouvelle forme (carre, rectangle, cercle,triangle), la mise à jour (déplacer), la recherche.....
+Cette partie a pour but de mettre en place la base de donnï¿½es du logiciel. Sur cette base de donnï¿½es pourra etre effectuer les opï¿½rations comme l'ajout d'une nouvelle forme (carre, rectangle, cercle,triangle), la mise ï¿½ jour (dï¿½placer), la recherche.....
 
-* Pour se faire nous avons du utiliser un SGBD embarqué, DERBY (qui est assez facile d'ulisation pour la mise  en place d'application de ce genre).
+* Pour se faire nous avons du utiliser un SGBD embarquï¿½, DERBY (qui est assez facile d'ulisation pour la mise  en place d'application de ce genre);  
 
-* Une classe a été crée pour l'établissement de la connexion vers la base de données. Elle contient la méthode connexion qui décrit les paramètres à utiliser pour se connecter ainsi que les méthodes de création et de suppression des classes spécifiques. 
 
-* Pour chaque forme, une classe DAO a crée. Cette classe contient les méthodes de connexion à la base de données, de creation d'une nouvelle figure spécifique, de suppreesion, de mise à jour et de recherche suivant des paramètres spécifiques à renseigner.
+* Une classe a ï¿½tï¿½ crï¿½e pour l'ï¿½tablissement de la connexion vers la base de donnï¿½es. Elle contient la mï¿½thode connexion qui dï¿½crit les paramï¿½tres ï¿½ utiliser pour se connecter ainsi que les mï¿½thodes de crï¿½ation et de suppression des classes spï¿½cifiques;   
 
-<hr>
 
-#### 4. Réaliser la classe `DrawingTUI` qui se chargera des interactions avec l’utilisateur
+* Pour chaque forme, une classe DAO a Ã©tÃ© crï¿½e. Cette classe contient les mï¿½thodes de connexion ï¿½ la base de donnï¿½es, de creation d'une nouvelle figure spï¿½cifique, de suppreesion, de mise ï¿½ jour et de recherche suivant des paramï¿½tres  ï¿½ renseigner.  
 
-Pour interragir avec le logiciel, cette classe a été mise en place. Elle a pour but d'analyser les informations saisies par l'utlisateur, de détecter la forme demandée par l'utilisateur et de verifier les erreurs de saisies à travers sa méthode nextCommand et la classe Interpreteur. Elle permet egalement d'afficher une forme démandée grace à sa méthode Print.
-Elle communique avec la classe `DrawingApp` qui contient la méthode main, méthode qui permet d'exécuter le logiciel.
 
 <hr>
 
-#### 5. Implémentation des commandes suivant le modèle de coneception `Commande`
-Pour mettre en place cette structure, nous avons crée une interface command qui à son tour implémente toutes les commandes mises en places. Chaque action représente une classe, dans laquelle est décrit comment elle est cencée se derouler et quelles paramètres elle est cencé l'implémenté.
-Ainsi pour chaque commande saisie un ensembles de verification sont fait d'abord sur la détection de la forme à créé à travers la classe CreateCommande puis en fonction de chaque orme des vérifications sont effectuées.,
+#### 4. Rï¿½aliser la classe `DrawingTUI` qui se chargera des interactions avec lï¿½utilisateur
+
+Pour interragir avec le logiciel, cette classe a ï¿½tï¿½ mise en place. Elle a pour but d'analyser les informations saisies par l'utlisateur, de dï¿½tecter la forme demandï¿½e par l'utilisateur et de verifier les erreurs de saisies ï¿½ travers sa mï¿½thode nextCommand et la classe Interpreteur. Elle permet egalement d'afficher une forme dï¿½mandï¿½e grace ï¿½ sa mï¿½thode Print.
+Elle communique avec la classe `DrawingApp` qui contient la mï¿½thode main, mï¿½thode qui permet d'exï¿½cuter le logiciel.
 
 <hr>
 
-### COMMENT FONCTIONNE LE LOGICIEL ?????
+#### 5. Implï¿½mentation des commandes suivant le modï¿½le de coneception `Commande`
+Pour mettre en place cette structure, nous avons crï¿½e une interface command qui ï¿½ son tour implï¿½mente toutes les commandes mises en places. Chaque action reprï¿½sente une classe, dans laquelle est dï¿½crit comment elle est cencï¿½e se derouler et quelles paramï¿½tres elle est cencï¿½ l'implï¿½mentï¿½.
+Ainsi pour chaque commande saisie un ensembles de verification sont fait d'abord sur la dï¿½tection de la forme ï¿½ crï¿½ï¿½ ï¿½ travers la classe CreateCommande puis en fonction de chaque orme des vï¿½rifications sont effectuï¿½es.,
+
+<hr>
+
+
 
 
 

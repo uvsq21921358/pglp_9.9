@@ -1,5 +1,8 @@
 package PERSISTANCE_DAO;
 
+/**
+ * La classe CercleeDao. Elle implemente l'interface DAO et permet la creation de la base de données de la forme carre.
+ */
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,8 +15,14 @@ import FORME_GRAPHIQUE.Cercle;
 
 public class CercleDAO implements DAO<Cercle>{
 
+	/**
+	 * Etablissement de la connexion
+	 */
 	private static String base = Connexion.base;
-
+	
+	/**
+	 * Methode de cretaion d'un objet de type cercle. Il s'agit juste de l'insertion d'un cercle dans la base de données
+	 */
 	@Override
 	public Cercle create(Cercle obj) {
 		try (Connection connect = DriverManager.getConnection(base)){
@@ -32,7 +41,9 @@ public class CercleDAO implements DAO<Cercle>{
 		return obj;
 	}
 
-	
+	/**
+	 * Methode de recherche d'un objet de type cercle
+	 */
 	@Override
 	public Cercle read(String id) {
 		Cercle C1 = null;
@@ -51,7 +62,11 @@ public class CercleDAO implements DAO<Cercle>{
 		}
 		return C1;
 	}
+	
 
+	/**
+	 * Methode de mise à jour d'un objet de type cercle
+	 */
 	@Override
 	public Cercle update(Cercle obj) {
 		try (Connection connect = DriverManager.getConnection(base)) {
@@ -70,6 +85,9 @@ public class CercleDAO implements DAO<Cercle>{
 		return obj;
 	}
 
+	/**
+	 * Methode de suppression d'un objet de type cercle
+	 */
 	@Override
 	public void delete(Cercle obj) {
 		try (Connection connect = DriverManager.getConnection(base)){
@@ -86,6 +104,9 @@ public class CercleDAO implements DAO<Cercle>{
 	}
 
 
+	/**
+	 * Methode de recherche d'un ensemble de type cercle
+	 */
 	@Override
 	public List<Cercle> findAll() {
 		 List<Cercle> liste = new ArrayList<>();

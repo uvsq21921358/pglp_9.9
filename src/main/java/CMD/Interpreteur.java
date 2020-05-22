@@ -11,6 +11,11 @@ import FORME_GRAPHIQUE.Cercle;
 import FORME_GRAPHIQUE.Forme;
 import FORME_GRAPHIQUE.Point2D;
 
+/**
+ * 
+ * @author SIMPORE
+ *Cette commande permet d'interpreter ce que l'utilisateur a saisit
+ */
 public class Interpreteur {
 
 		  public HashMap<String,Command> set = new HashMap<>();

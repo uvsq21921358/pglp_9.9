@@ -1,5 +1,7 @@
 package PERSISTANCE_DAO;
-
+/**
+ * La classe CarreDao. Elle implemente l'interface DAO et permet  la creation de la base de données de la forme carre.
+ */
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,16 +15,22 @@ import FORME_GRAPHIQUE.Cercle;
 
 public class CarreDAO implements DAO<Carre>{
 
+	/**
+	 * Etablissement de la connexion
+	 */
 	private static String base = Connexion.base;
 	
+	/**
+	 * Methode de cretaion d'un objet de type carre. Il s'agit juste de l'insertion d'un carre dans la base de données
+	 */
 	@Override
 	public Carre create(Carre obj) { 
 		try (Connection connect = DriverManager.getConnection(base)){
 			PreparedStatement prepare = connect.prepareStatement("INSERT INTO Carre (nomCarre, x, y, cote) VALUES (?, ?, ?, ?)");
 			prepare.setString(1, obj.getNomCarre());
 			prepare.setDouble(2, obj.getOrigine().getX());
-			prepare.setDouble(2, obj.getOrigine().getY());
-			prepare.setDouble(1, obj.getCote());
+			prepare.setDouble(3, obj.getOrigine().getY());
+			prepare.setDouble(4, obj.getCote());
 			System.out.println("Creation reussie " + obj);
 			int result = prepare.executeUpdate();
 			assert result == 1; 
@@ -33,6 +41,9 @@ public class CarreDAO implements DAO<Carre>{
 		return obj;
 	}
 
+	/**
+	 * Methode de recherche d'un objet de type carre
+	 */
 	@Override
 	public Carre read(String id) {
 		Carre CAR1 = null;
@@ -52,6 +63,9 @@ public class CarreDAO implements DAO<Carre>{
 		return CAR1;
 	}
 
+	/**
+	 * Methode de mise à jour d'un objet de type carre
+	 */
 	@Override
 	public Carre update(Carre obj) {
 		try (Connection connect = DriverManager.getConnection(base)) {
@@ -69,6 +83,9 @@ public class CarreDAO implements DAO<Carre>{
 		return obj;
 	}
 
+	/**
+	 * Methode de suppression d'un objet de type carre
+	 */
 	@Override
 	public void delete(Carre obj) {
 		try (Connection connect = DriverManager.getConnection(base)){
@@ -84,6 +101,9 @@ public class CarreDAO implements DAO<Carre>{
 		
 	}
 
+	/**
+	 * Methode de recherche d'un ensemble de type carre
+	 */
 	@Override
 	public List<Carre> findAll() {
 		 List<Carre> liste = new ArrayList<>();

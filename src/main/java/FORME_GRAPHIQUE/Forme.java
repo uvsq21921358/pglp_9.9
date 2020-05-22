@@ -2,7 +2,7 @@ package FORME_GRAPHIQUE;
 /**
  * 
  * @author SIMPORE
- *Interface graphique
+ *Interface graphique Forme pour la définition de toutes les autres formes
  */
 public interface Forme {
 	

@@ -2,8 +2,8 @@ package PERSISTANCE_DAO;
 
 import java.util.List;
 /**
- * Interface DAO
- * @author utilisateur
+ * Interface DAO. Elle sera redefinit pour chaque forme suivant des parmètres precis.
+ * @author SIMPORE
  *
  * @param <T>
  */
