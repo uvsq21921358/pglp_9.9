@@ -9,10 +9,14 @@ import CMD.CommandRectangle;
 import CMD.CommandTriangle;
 import CMD.Interpreteur;
 import FORME_GRAPHIQUE.FormeGroup;
-
+/**
+ * test d'implementation de la commande de creation d'un triangle
+ * @author utilisateur
+ *
+ */
 public class CommandTriangleTest {
 
-	@Test
+	/*@Test
 	public void executeTest() {
 		
 		Interpreteur inter=new Interpreteur();
@@ -35,13 +39,13 @@ public class CommandTriangleTest {
 	
 	@Test
 	public void erreur2Test() {
-		FormeGroup form3=new FormeGroup();
+		//FormeGroup form3=new FormeGroup();
 		Interpreteur inter=new Interpreteur();
 		inter.setParametersT(new String[] {"Mon_Triangle@","0","3","fff","10","0","20"});
 		CommandTriangle com=new CommandTriangle(inter);
 		com.execute(); 
 		CommandPrint comAff=new CommandPrint(inter); 
 		comAff.execute();
-	}
+	}*/
 
 }

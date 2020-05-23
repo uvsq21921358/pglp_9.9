@@ -1,7 +1,7 @@
 ## pglp_9.9 `LOGICIEL DE DESSIN`
 Ce projet a pour but de permettre a l'&eacute;tudiant de savoir impl&eacute;menter les principes de conception ainsi que les fonctionnalit&eacute;s du langage java. Il s'agit là de mettre en place un logiciel de dessin.
 
-Le logiciel devra permettre de :
+Le logiciel devra fournir les foctionnalit&eacute;s suivantes :
 
 * Chaque forme sera identifi&eacute;e par un nom ("c1", "unCercle", ...).  
 
@@ -77,7 +77,7 @@ Pour cette partie, Nous avons cr&eacute;e une interface Forme qui sera impl&eacu
 <hr>
 
 #### 2. Repr&eacute;sentons la notion de groupe de formes en appliquant le pattern `Composite`
-La classe FormeGroup qui impl&eacute;mentera l'interface Forme permettra de pouvoir effectuer un ensemble de manipulation (deplacer , afficher toutes les formes du groupes suivant un param&egrave;tre donn&eacute;) sur un groupe de forme (Carre, cercle, rectangle, triangle) donn&eacute;.   
+La classe FormeGroup qui impl&eacute;mentera l'interface Forme permettra de pouvoir effectuer un ensemble de manipulation (deplacer , afficher toutes les formes du groupes suivant un param&egrave;tre donn&eacute; sur un groupe de forme (Carre, cercle, rectangle, triangle) donn&eacute;.   
 
 
 <hr>
@@ -91,7 +91,7 @@ Cette partie a pour but de mettre en place la base de donn&eacute;es du logiciel
 * Une classe a &eacute;t&eacute; cr&eacute;e pour l'&eacute;tablissement de la connexion vers la base de donn&eacute;es. Elle contient la m&eacute;thode connexion qui d&eacute;crit les param&egrave;tres &agrave; utiliser pour se connecter ainsi que les m&eacute;thodes de cr&eacute;ation et de suppression des classes sp&eacute;cifiques;   
 
 
-* Pour chaque forme, une classe DAO a été cr&eacute;e. Cette classe contient les m&eacute;thodes de connexion &agrave; la base de donn&eacute;es, de creation d'une nouvelle figure sp&eacute;cifique, de suppreesion, de mise &agrave; jour et de recherche suivant des param&egrave;tres  &agrave; renseigner.  
+* Pour chaque forme, une classe DAO a été cr&eacute;ee. Cette classe contient les m&eacute;thodes de connexion &agrave; la base de donn&eacute;es, de creation d'une nouvelle figure sp&eacute;cifique, de suppreesion, de mise &agrave; jour et de recherche suivant des param&egrave;tres  &agrave; renseigner.  
 
 
 <hr>
@@ -103,11 +103,11 @@ Elle communique avec la classe `DrawingApp` qui contient la m&eacute;thode main,
 
 <hr>
 
-#### 5. Impl&eacute;mentation des commandes suivant le mod&eacute;le de coneception `Commande`
+#### 5. Impl&eacute;mentation des commandes suivant le mod&eacute;le de conception `Commande`
 Pour mettre en place cette structure, nous avons cr&eacute;e une interface command qui &agrave; son tour impl&eacute;mente toutes les commandes mises en places. Chaque action repr&eacute;sente une classe, dans laquelle est d&eacute;crit comment elle est cenc&eacute;e se derouler et quelles param&egrave;tres elle est cenc&eacute; l'impl&eacute;ment&eacute;.
 Ainsi pour chaque commande saisie un ensembles de verification sont fait d'abord sur la d&eacute;tection de la forme &agrave; cr&eacute;e &agrave; travers la classe CreateCommande puis en fonction de chaque orme des v&eacute;rifications sont effectu&eacute;es.,
 
-<hr>
+
 
 
 

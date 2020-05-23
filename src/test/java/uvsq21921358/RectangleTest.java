@@ -6,7 +6,11 @@ import org.junit.Test;
 
 import FORME_GRAPHIQUE.Affichage;
 import FORME_GRAPHIQUE.Rectangle;
-
+/**
+ * test de creation d'un rectangle
+ * @author utilisateur
+ *
+ */
 public class RectangleTest {
 
 	@Test()

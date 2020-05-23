@@ -7,7 +7,11 @@ import org.junit.Test;
 import FORME_GRAPHIQUE.Rectangle;
 import PERSISTANCE_DAO.DAO;
 import PERSISTANCE_DAO.RectangleDAO;
-
+/**
+ * test d'implementation de la  creation d'un rectagle
+ * @author utilisateur
+ *
+ */
 public class RectangleDaoTest {
 
 	@Test 

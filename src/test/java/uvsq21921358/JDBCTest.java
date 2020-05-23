@@ -11,7 +11,7 @@ public class JDBCTest {
 	/**
 	 * Methode de test de l'etablissement de la connexion "Methode Connexion"
 	 */
-	@Test()
+	/*@Test()
 	public void createConnexion(){
 		Connexion DB=new Connexion();
 		DB.connexion();  

@@ -9,7 +9,11 @@ import CMD.CommandPrint;
 import CMD.Interpreteur;
 import FORME_GRAPHIQUE.Cercle;
 import FORME_GRAPHIQUE.FormeGroup;
-
+/**
+ * test d'implementation de la commande de creation d'un cercle
+ * @author utilisateur
+ *
+ */
 public class CommandCercleTest {
 
 	@Test

@@ -4,7 +4,11 @@ import org.junit.Test;
 
 import FORME_GRAPHIQUE.Affichage;
 import FORME_GRAPHIQUE.Point2D;
-
+/**
+ * test d'implementation de creation d'un point
+ * @author utilisateur
+ *
+ */
 public class PointTest {
 	
 	private Point2D P1;

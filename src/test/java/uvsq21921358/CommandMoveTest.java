@@ -8,7 +8,11 @@ import CMD.CommandCercle;
 import CMD.CommandPrint;
 import CMD.Interpreteur;
 import CMD.MoveCommand;
-
+/**
+ * test d'implementation de la commande de deplacement
+ * @author utilisateur
+ *
+ */
 public class CommandMoveTest {
 
 	 @Test

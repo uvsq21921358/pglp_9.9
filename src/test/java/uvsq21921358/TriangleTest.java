@@ -10,7 +10,7 @@ import FORME_GRAPHIQUE.Triangle;
 public class TriangleTest {
 
 	/**
-	 * Methode de test de deplacement du Triangle
+	 * Methode de test de déplacement du Triangle
 	 */
 	@Test()
 	public void moveTriangleTest() {
