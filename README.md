@@ -22,47 +22,47 @@ Le logiciel devra permettre de :
 
 <hr>
 
-#### 1. Proposons et impl�mentons une hi�rarchie de classe repr�sentant les formes graphiques  
+#### 1. Proposons et impl&eacute;mentons une hi�rarchie de classe repr�sentant les formes graphiques  
 Pour cette partie, Nous avons cr�e une interface Forme qui sera impl�mentée à son tour par toutes les formes � mettre en place: le carr�, le cercle, le rectangle et le triangle. Les formes ont été implémentée suivant ces structures ci-dessous:  
 
 * Le cercle : initialisé par un nom, les cordonnées de son centre de type point(x,y) et un rayon;  
     
     
-    `public Cercle(String nomC, double x, double y, double rayon) {
+    ```public Cercle(String nomC, double x, double y, double rayon) {
 		this.nomC=nomC;
 		this.centre = new Point2D("Centre",x,y);
 		this.rayon = rayon;
-	}`
+	}```
   
 
 * Le carré : initialisé par un nom, une origine de type point(x,y) afin de pouvoir facilité son déplacement et un coté; 
 
-    `public Carre(String nomCarre,double x, double y, double cote) {
+    ```public Carre(String nomCarre,double x, double y, double cote) {
 		this.nomCarre = nomCarre;
 		this.origine =new Point2D("origine",x,y);
 		this.cote = cote;
-	}`
+	}```
   
 
 * Le rectangle : initialisé par un nom, une origine de type point également, une longeur et une largeur;
     
     
-    `public Rectangle(String nomR, double x, double y ,double longueur, double largeur) {
+    ```public Rectangle(String nomR, double x, double y ,double longueur, double largeur) {
 		this.nomR = nomR;
 		this.origineR = new Point2D("origine Rectangle",x,y);
 		Longueur = longueur;
 		Largeur = largeur;
-	} ` 
+	} ``` 
  
 
 * Le triangle : initialisé par trois (3) points. 
 	
 	
-    `public Triangle(String NomT, double a, double b, double c, double d, double e, double f) {
+    ```public Triangle(String NomT, double a, double b, double c, double d, double e, double f) {
 		this.P1 = new Point2D("origineP1",a,b);
 		this.P2 = new Point2D("origineP2",c,d);
 		this.P3 = new Point2D("origineP3",e,f);
-	} `
+	} ```
   
 
 
