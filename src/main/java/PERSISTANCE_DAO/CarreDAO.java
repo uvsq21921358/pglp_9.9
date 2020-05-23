@@ -49,7 +49,7 @@ public class CarreDAO implements DAO<Carre>{
 		Carre CAR1 = null;
 		try (Connection connect = DriverManager.getConnection(base)){
 			System.out.println(" Recherche " + id);
-			PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Carre WHERE nomCarre = ?");
+			PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Carre WHERE NOMCARRE = ?");
 			prepare.setString(1, id);
 			ResultSet result = prepare.executeQuery();
 			if(result.next()){
@@ -108,7 +108,7 @@ public class CarreDAO implements DAO<Carre>{
 	public List<Carre> findAll() {
 		 List<Carre> liste = new ArrayList<>();
 			try (Connection connect = DriverManager.getConnection(base)){
-				PreparedStatement prepare = connect.prepareStatement("SELECT FROM Carre "+ "WHERE nomCarre = ?");
+				PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Carre "+ "WHERE nomCarre = ?");
 				ResultSet result = prepare.executeQuery();
 		      while(result.next()){
 		        liste.add(new Carre(result.getString("nomCarre"),result.getDouble("x"), result.getDouble("y"),result.getDouble("cote")));

@@ -13,6 +13,8 @@ public class Connexion {
 	 */
 	private static final String Nom = "Nayima";
 	private static final String password = "pwd";
+	/*private static final String Nom = "";
+	private static final String password = "";*/
 	public static String base = "jdbc:derby:base;create=true";
 	
 	/**

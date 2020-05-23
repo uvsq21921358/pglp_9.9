@@ -46,6 +46,5 @@ public class Interpreteur {
 		    }
 		  }
 
-		  public void undo(){
-		  }
+		 
 }

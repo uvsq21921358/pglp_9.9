@@ -4,8 +4,8 @@ package INTERFACE_USER;
 import java.util.List;
 
 import CMD.*;
-import FORME_GRAPHIQUE.Forme;
-import FORME_GRAPHIQUE.FormeGroup;
+import FORME_GRAPHIQUE.*;
+import PERSISTANCE_DAO.DAOFactory;
 
 
 public class DrawingTUI {
@@ -92,6 +92,54 @@ public class DrawingTUI {
 					  
 				
 				  case "View":
+					  if(chaine[2].contentEquals("All")) {
+						  if (chaine[3].contentEquals("Cercle") ) {
+							  List<Cercle> listCercle= DAOFactory.getCercleDAO().findAll();
+							  for (int i=0; i<listCercle.size();i++) {
+									System.out.println(listCercle.get(i));
+								}
+						  }
+					  }
+					  else
+					  {
+						  
+							  if (chaine[2].contentEquals("Cercle") ) {
+								  Cercle C1=  DAOFactory.getCercleDAO().read(chaine[3]);
+								  if(C1!=null) { 
+									  //System.out.println("C'est un cercle");
+									  C1.print();
+								  }else System.out.println("Cette forme n'existe pas");
+							  }
+							  else
+								  if (chaine[2].contentEquals("Carre") ) {
+									 Carre Ca= DAOFactory.getCarreDAO().read(chaine[3]);
+									 if(Ca!=null) {
+										 System.out.println("C'est un carre");
+										 Ca.print();
+									 }else System.out.println("Cette forme n'existe pas");
+								  }
+								  else
+									  if (chaine[2].contentEquals("Rectangle") ) {
+										Rectangle R1= DAOFactory.getRectangleDAO().read(chaine[3]);
+										if(R1!=null) {
+										  System.out.println("C'est un rectangle");
+										  R1.print();
+										}else System.out.println("Cette forme n'existe pas");
+									  }
+									  else
+										  if (chaine[2].contentEquals("Triangle") ) {
+											 Triangle TR1= DAOFactory.getTriangleDAO().read(chaine[3]);
+											 if(TR1!=null) {
+											  System.out.println("C'est un triangle");
+											  TR1.print();
+											 }else System.out.println("Cette forme n'existe pas");
+										  }
+										  else 	
+											  System.out.println("L'élément recherché n'existe pas!!!!");
+						  
+						 // DrawingTUI affiche = new DrawingTUI();
+						 // affiche.printDessin(interprete);
+					  }
 					 
 			
 				 /* default:

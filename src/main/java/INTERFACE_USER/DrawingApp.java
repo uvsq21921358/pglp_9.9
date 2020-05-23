@@ -39,7 +39,8 @@ public class DrawingApp {
     			System.out.println("tri1 =Triangle( (0, 0), (2, 2), (4, 0))");
     			System.out.println("translate =Move( c1, (10, 20))");
     			System.out.println("translateAll =Move( All, (10, 20))");
-    			System.out.println("Affiche =");
+    			System.out.println("Affiche =View( Cercle, cer1)");
+    			//System.out.println("AfficheAll =View( All , Cercle)");
     			System.out.println("quitter =quit\n");
     			System.out.println("VEUILLEZ SAISIR VOTRE COMMANDE SVP:\n");
     			run(args); 

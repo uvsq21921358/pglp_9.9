@@ -1,5 +1,5 @@
 ## pglp_9.9 `LOGICIEL DE DESSIN`
-Ce projet a pour but de permettre � l'�tudiant de savoir impl�menter les principes de conception ainsi que les fonctionnalit�s du langage java. Il s'agit là de mettre en place un logiciel de dessin.
+Ce projet a pour but de permettre a l'�tudiant de savoir impl�menter les principes de conception ainsi que les fonctionnalit�s du langage java. Il s'agit là de mettre en place un logiciel de dessin.
 
 Le logiciel devra permettre de :
 
