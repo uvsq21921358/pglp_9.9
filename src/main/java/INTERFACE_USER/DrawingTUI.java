@@ -154,10 +154,10 @@ public class DrawingTUI {
 					  for(Forme forme : interprete.Mon_dessin) {
 						  fg.addForme(forme);
 						  forme.print();
-						  
+						  System.out.println("CREATION REUSIE!!!!");
 					  }
 					  
-					  System.out.println("CREATION REUSIE!!!!");
+					  
 				
 				 
 					  
