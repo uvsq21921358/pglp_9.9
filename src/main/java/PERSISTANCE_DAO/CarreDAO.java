@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import FORME_GRAPHIQUE.Carre;
-import FORME_GRAPHIQUE.Cercle;
+
 
 public class CarreDAO implements DAO<Carre>{
 
@@ -25,6 +25,7 @@ public class CarreDAO implements DAO<Carre>{
 	 */
 	@Override
 	public Carre create(Carre obj) { 
+		
 		try (Connection connect = DriverManager.getConnection(base)){
 			PreparedStatement prepare = connect.prepareStatement("INSERT INTO Carre (nomCarre, x, y, cote) VALUES (?, ?, ?, ?)");
 			prepare.setString(1, obj.getNomCarre());

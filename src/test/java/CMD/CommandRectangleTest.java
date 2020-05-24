@@ -1,4 +1,4 @@
-package uvsq21921358;
+package CMD;
 
 import static org.junit.Assert.*;
 
@@ -17,7 +17,7 @@ import FORME_GRAPHIQUE.FormeGroup;
  */
 public class CommandRectangleTest {
 
-	@Test
+	/*@Test
 	public void executeTest() {
 		
 		//FormeGroup form=new FormeGroup();
@@ -49,6 +49,6 @@ public class CommandRectangleTest {
 		com.execute(); 
 		CommandPrint comAff=new CommandPrint(inter); 
 		comAff.execute();
-	}
+	}*/
 
 }

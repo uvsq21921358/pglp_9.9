@@ -1,4 +1,4 @@
-package uvsq21921358;
+package CMD;
 
 import static org.junit.Assert.*;
 

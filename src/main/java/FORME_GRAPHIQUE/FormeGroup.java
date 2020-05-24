@@ -1,7 +1,6 @@
 package FORME_GRAPHIQUE;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -11,11 +10,14 @@ import java.util.List;
  */
 
 public class FormeGroup implements Forme{
+	 private String nom;
 	 
-	public List<Forme> formeList;
+	 
+	public List<Forme> formeList= new ArrayList<Forme>();
 	
-	public FormeGroup() {
-		formeList = new ArrayList<Forme>();
+	public FormeGroup(String nom) {
+		this.nom=nom;
+		
 	}
 	
 	public void addForme(Forme f) {

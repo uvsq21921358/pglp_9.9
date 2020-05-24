@@ -4,7 +4,6 @@ package PERSISTANCE_DAO;
  */
 import FORME_GRAPHIQUE.Carre;
 import FORME_GRAPHIQUE.Cercle;
-import FORME_GRAPHIQUE.Forme;
 import FORME_GRAPHIQUE.Rectangle;
 import FORME_GRAPHIQUE.Triangle;
 

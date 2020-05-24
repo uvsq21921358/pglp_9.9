@@ -1,6 +1,7 @@
 package INTERFACE_USER;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import CMD.*;
@@ -136,6 +137,8 @@ public class DrawingTUI {
 										  }
 										  else 	
 											  System.out.println("L'élément recherché n'existe pas!!!!");
+							 
+					  
 						  
 						 // DrawingTUI affiche = new DrawingTUI();
 						 // affiche.printDessin(interprete);
@@ -145,20 +148,32 @@ public class DrawingTUI {
 				 /* default:
 					  System.out.println("erreur syntaxique");*/
 					  
+				  case "CreateGroup": 
+					 // List<Forme> liste = new ArrayList<>();
+					  FormeGroup fg=new FormeGroup(chaine[2]);
+					  for(Forme forme : interprete.Mon_dessin) {
+						  fg.addForme(forme);
+						  forme.print();
+						  
+					  }
+					  
+					  System.out.println("CREATION REUSIE!!!!");
+				
+				 
+					  
 		}
 	
-		if(chaine[0].contentEquals("quit")) {
+		if(chaine[0].contentEquals("quit") || chaine[0].contentEquals("QUIT") || chaine[0].contentEquals("quitter")) {
 			
 				CommandQuit quit = new CommandQuit(interprete);
 				quit.execute();
 		}
-		/*else
-		if(chaine[1].contentEquals("All")) {
+		else
+		if(chaine[0].contentEquals("Save") || chaine[0].contentEquals("save") || chaine[0].contentEquals("SAVE")) {
 			
-			for (Forme form : formeList) {
-				form.move(x,y);
-			}
-		}*/
+			 CommandSave commandeSave = new CommandSave(interprete);
+		        commandeSave.execute();
+		}
 		 
 				return null;
 

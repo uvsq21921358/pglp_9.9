@@ -44,7 +44,7 @@ public class Connexion {
 	}
 	
 	public void createTableCercle(){
-
+		
 		try (Connection connect = DriverManager.getConnection(base)){
 			Statement state = connect.createStatement(); 
 			state.addBatch("CREATE TABLE Cercle ("+ "nomC VARCHAR(100) PRIMARY KEY,"+  "x double ,"+ " y double ,"+ " rayon double" + ")");

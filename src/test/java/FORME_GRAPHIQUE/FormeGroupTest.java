@@ -1,4 +1,4 @@
-package uvsq21921358;
+package FORME_GRAPHIQUE;
 
 import static org.junit.Assert.*;
 
@@ -161,7 +161,7 @@ public class FormeGroupTest {
 		Cercle Ce2=new Cercle(null, 1,2,3);
 		Triangle T1 =new Triangle (null,0,2,3,3,5,6);
 		Triangle T2 =new Triangle (null,1,3,3,4,5,6);
-		FormeGroup fg=new FormeGroup();
+		FormeGroup fg=new FormeGroup("f1");
 		fg.addForme(Ca1);
 		fg.addForme(Ca2);
 		fg.addForme(Ce1);

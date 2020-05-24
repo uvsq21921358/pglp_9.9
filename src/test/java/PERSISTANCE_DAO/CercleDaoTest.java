@@ -1,4 +1,4 @@
-package uvsq21921358;
+package PERSISTANCE_DAO;
 
 import static org.junit.Assert.*;
 

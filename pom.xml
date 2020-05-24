@@ -8,6 +8,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+     <main-class>INTERFACE_USER.DrawingApp</main-class>
   </properties>
   
   <dependencies>
@@ -22,6 +23,9 @@
       <groupId>org.apache.derby</groupId>
       <artifactId>derby</artifactId>
       <version>10.8.3.0</version>
+     <!-- <scope>System</scope>-->
+      
+		
     </dependency>
 
     <dependency>
@@ -44,6 +48,21 @@
 		  <artifactId>maven-project-info-reports-plugin</artifactId>
 		  <version>3.0.0</version>
 		</plugin>
+		
+		<plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                      <classpathPrefix>lib/</classpathPrefix>
+                <mainClass>${main-class}</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
 
 	</plugins>
 

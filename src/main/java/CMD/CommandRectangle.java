@@ -3,11 +3,9 @@ package CMD;
 import java.util.ArrayList;
 
 import FORME_GRAPHIQUE.Affichage;
-import FORME_GRAPHIQUE.Cercle;
-import FORME_GRAPHIQUE.Forme;
 import FORME_GRAPHIQUE.Rectangle;
-import PERSISTANCE_DAO.CercleDAO;
-import PERSISTANCE_DAO.RectangleDAO;
+
+
 
 /**
  *  Classe CommandCarre qui permet de creer un rectangle.

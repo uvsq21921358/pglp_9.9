@@ -1,4 +1,4 @@
-package uvsq21921358;
+package FORME_GRAPHIQUE;
 
 import static org.junit.Assert.*;
 

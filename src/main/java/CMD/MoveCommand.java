@@ -1,7 +1,7 @@
 package CMD;
 
 import FORME_GRAPHIQUE.*;
-import PERSISTANCE_DAO.*;
+
 /**
  * 
  * @author SIMPPORE

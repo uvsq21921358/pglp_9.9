@@ -1,4 +1,4 @@
-package uvsq21921358;
+package CMD;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +15,7 @@ import CMD.MoveCommand;
  */
 public class CommandMoveTest {
 
-	 @Test
+	/* @Test
 	  public void executeTest(){
 	    Interpreteur interprete = new Interpreteur();
 	    interprete.setParametersT(new String[]{"c5", "0", "0", "1"});
@@ -26,7 +26,7 @@ public class CommandMoveTest {
 	    commandeMove.execute();
 	    CommandPrint comAff=new CommandPrint(interprete); 
 		comAff.execute();
-	  }
+	  }*/
 
 
 }

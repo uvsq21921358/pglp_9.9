@@ -2,7 +2,8 @@ package INTERFACE_USER;
 
 import java.util.Scanner;
 
-import CMD.CommandQuit;
+import CMD.InitBD;
+import EXCEPTIONS.DaoException;
 
 
 public class DrawingApp {
@@ -15,6 +16,14 @@ public class DrawingApp {
     
     public static void run( String[] args) 
 	{
+    	
+    	//Scanner rep = new Scanner(System.in);
+    			try {
+    				InitBD.createTables();
+    			} catch (DaoException e1) {
+    				//e1.printStackTrace();	
+    			}
+    			
     	while(true){
     			saisie=scaner.nextLine();
     			drawing.nextCommand(saisie);
@@ -23,7 +32,6 @@ public class DrawingApp {
     			
     		}
     	
-
   			  
     }
     
@@ -40,7 +48,9 @@ public class DrawingApp {
     			System.out.println("translate =Move( c1, (10, 20))");
     			System.out.println("translateAll =Move( All, (10, 20))");
     			System.out.println("Affiche =View( Cercle, cer1)");
-    			//System.out.println("AfficheAll =View( All , Cercle)");
+    			System.out.println("Save");
+    			System.out.println("groupe =CreateGroup( nom)");
+    			System.out.println("Addgroupe =Add( nomGroupe, forme)");
     			System.out.println("quitter =quit\n");
     			System.out.println("VEUILLEZ SAISIR VOTRE COMMANDE SVP:\n");
     			run(args); 

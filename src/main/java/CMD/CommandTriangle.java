@@ -3,12 +3,8 @@ package CMD;
 import java.util.ArrayList;
 
 import FORME_GRAPHIQUE.Affichage;
-import FORME_GRAPHIQUE.Carre;
-import FORME_GRAPHIQUE.Forme;
-import FORME_GRAPHIQUE.Rectangle;
 import FORME_GRAPHIQUE.Triangle;
-import PERSISTANCE_DAO.CarreDAO;
-import PERSISTANCE_DAO.TriangleDAO;
+
 
 /**
  *  Classe CommandCarre qui permet de creer un triangle.

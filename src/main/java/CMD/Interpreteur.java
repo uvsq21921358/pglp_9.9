@@ -4,12 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import FORME_GRAPHIQUE.Cercle;
 import FORME_GRAPHIQUE.Forme;
-import FORME_GRAPHIQUE.Point2D;
+
 
 /**
  * 

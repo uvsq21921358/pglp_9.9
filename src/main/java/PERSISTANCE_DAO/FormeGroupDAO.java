@@ -11,6 +11,7 @@ public class FormeGroupDAO implements DAO <FormeGroup>{
 	/**
 	 * Creation
 	 */
+	
 	@Override
 	public FormeGroup create(FormeGroup obj) {
 		// TODO Auto-generated method stub
